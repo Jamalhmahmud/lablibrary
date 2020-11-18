@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace LibrarySystem
+{
+    class account
+    {
+        private string id;
+
+        public string acc_id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
+        protected string name;
+        protected string department;
+        internal int deposit;
+        internal float cgpa;
+
+        private void creat_account()
+        {
+            Console.Write("Enter Your Id: ");
+            acc_id = Console.ReadLine();
+            Console.Write("Enter Your Name: ");
+            name = Console.ReadLine();
+            Console.Write("Enter Your Type:");
+            department = Console.ReadLine();
+            Console.Write("Enter initial deposit");
+            deposit = int.Parse(Console.ReadLine());
+            Console.Write("Enter Your cgpa: ");
+            cgpa = float.Parse(Console.ReadLine());
+        }
+
+        public void creataccount()
+        {
+            creat_account();
+        }
+
+        private void show_account()
+        {
+            Console.WriteLine("Your Id:", acc_id);
+            Console.WriteLine("Your Name:", name);
+            Console.WriteLine("Your cgpa:", cgpa);
+            Console.WriteLine("Your Department:", department);
+
+        }
+
+        public void showaccount()
+        {
+            show_account();
+        }
+    }
+}
